@@ -23,6 +23,7 @@ $laptop_baru = new Laptop();
 $toko = new Toko();
 $belikomputer = new komputer();
 //panggil methode objek
+echo "<br>";
 echo $laptop_baru->beli_laptop();
 echo "<br>";
 echo $belikomputer->beli_komputer();

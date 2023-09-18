@@ -6,23 +6,26 @@ class Aritmatika
     private $bilangan2;
     protected $bilangan3;
 
+    public function setBilangan3($bilangan3)
+    {
+        $this->bilangan3 = $bilangan3;
+    }
+
+    public function getbilangan3()
+    {
+        return $this->bilangan3;
+    }
+
+    public function setBilangan2($bilangan2)
+    {
+        $this->bilangan2 = $bilangan2;
+    }
+
     public function getLabel()
     {
         return $this->bilangan2;
     }
 
-    public function setBilangan2($nilai)
-    {
-        $this->bilangan2 = $nilai;
-    }
-}
-
-class hitung extends Aritmatika
-{
-   public function setBilangan3($nilai)
-    {
-        $this->bilangan3 = $nilai;
-    }
     public function tambah()
     {
         $hasil = $this->bilangan1 + $this->bilangan3 + $this->getLabel();
@@ -43,17 +46,14 @@ class hitung extends Aritmatika
 
     public function bagi()
     {
+
         $hasil = $this->bilangan1 / $this->bilangan3 / $this->getLabel();
         return $hasil;
     }
 }
 
-$operasi = new hitung();
 
-$operasi->bilangan1 = 5;
-$operasi->setBilangan3(2);
-
-$operasi->setBilangan2(3);
+$operasi = new Aritmatika();
 
 // Melakukan operasi tambah
 echo "Hasil Penjumlahan: " . $operasi->tambah() . "<br>";
